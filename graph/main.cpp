@@ -213,6 +213,7 @@ ryu_states process_fsm(p2Qeue<ryu_inputs>& inputs)
 				case IN_JUMP_FINISH: state = ST_IDLE; break;
 				case IN_X: state = ST_PUNCH_FORWARD_JUMP; punch_timer = SDL_GetTicks(); break;
 				case IN_JUMP_AND_CROUCH: state = ST_IDLE; break;
+				case IN_LEFT_AND_RIGHT: state = ST_IDLE; break;
 
 				}
 			}
@@ -224,6 +225,7 @@ ryu_states process_fsm(p2Qeue<ryu_inputs>& inputs)
 				{
 				case IN_JUMP_FINISH: state = ST_IDLE; break;
 				case IN_JUMP_AND_CROUCH: state = ST_IDLE; break;
+				case IN_LEFT_AND_RIGHT: state = ST_IDLE; break;
 				case IN_X: state = ST_PUNCH_BACKWARD_JUMP; punch_timer = SDL_GetTicks(); break;
 				}
 			}
